@@ -1,0 +1,62 @@
+version: '3.3'
+services:
+  pg-db:
+    image: "postgres"
+    restart: always
+    mem_limit: 1024m
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: 1234
+  redis:
+    image: "redis:alpine"
+    container_name: "redis"
+    restart: always
+    mem_limit: 512m
+    ports:
+      - "6379:6379"
+
+  # Aplicacoes
+  hero-api:
+    build:
+      context: ./src/
+      dockerfile: ./Hero.Api/Dockerfile
+    deploy:
+      mode: replicated
+      replicas: 2
+    restart: always
+    mem_limit: 512m
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DefaultConnection: Pooling=true;Host=pg-db;Port=5432;Database=sorteador-globalsys;User Id=postgres;Password=1234
+      TZ: "America/Sao_Paulo"
+    command:
+      sh -c "ln -snf /usr/share/zoneinfo/$TZ /etc/localtime"
+    depends_on:
+      - pg-db
+      - redis
+
+  # Jobs
+  hero-jobs:
+    build:
+      context: ./src/
+      dockerfile: ./Hero.Jobs/Dockerfile
+    restart: always
+    mem_limit: 512m
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DefaultConnection: Pooling=true;Host=pg-db;Port=5432;Database=sorteador-globalsys;User Id=postgres;Password=1234
+      TZ: "America/Sao_Paulo"
+    command:
+      sh -c "ln -snf /usr/share/zoneinfo/$TZ /etc/localtime"
+    depends_on:
+      - pg-db
+      - redis
+
+  # Load Balancer
+  nginx:
+    build: ./nginx
+    restart: always
+    mem_limit: 512m
+    ports:
+    - "80:80"

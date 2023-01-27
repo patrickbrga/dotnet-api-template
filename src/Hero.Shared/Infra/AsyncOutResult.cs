@@ -2,8 +2,8 @@
 {
     public struct AsyncOutResult<T, OUT>
     {
-        private T returnValue;
-        private OUT result;
+        private readonly T returnValue;
+        private readonly OUT result;
 
         public AsyncOutResult(T returnValue, OUT result)
         {

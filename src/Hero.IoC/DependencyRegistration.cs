@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
+using Serilog.Sinks.Elasticsearch;
 using System.Reflection;
 
 namespace IoC
@@ -23,6 +24,12 @@ namespace IoC
                 defaultConnection = configuration.GetConnectionString("DefaultConnection");
 
             Log.Logger = new LoggerConfiguration()
+                //TODO: Pegar a URI via Environment...
+                .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri(configuration["ElasticConfiguration:Uri"]))
+                {
+                    AutoRegisterTemplate = true,
+                    IndexFormat = configuration["ElasticConfiguration:IndexFormat"]
+                })
                 .ReadFrom.Configuration(configuration)
                 .CreateLogger();
 

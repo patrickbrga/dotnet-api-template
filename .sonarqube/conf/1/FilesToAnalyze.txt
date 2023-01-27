@@ -1,0 +1,14 @@
+﻿C:\Users\patrick.braga\source\repos\Hero\src\Hero.Core\Commands\Heroes\CreateHeroCommand.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Core\Commands\Heroes\Handler\CreateHeroCommandHandler.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Core\Entities\Heroes\Hero.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Core\Interfaces\IUnitOfWork.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Core\Interfaces\Repositories\Heroes\IHeroRepository.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Core\Interfaces\Repositories\IBaseRepository.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Core\Interfaces\Security\IAuthenticatedUser.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Core\Mapping\RequestProfile.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Core\Mapping\ResponseProfile.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Core\Mapping\ServiceProfile.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Core\Models\Responses\HeroResponse.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Core\Queries\Heroes\GetHeroQuery.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Core\Queries\Heroes\Handler\GetHeroQueryHandler.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Core\Sercurity\AuthenticatedUser.cs

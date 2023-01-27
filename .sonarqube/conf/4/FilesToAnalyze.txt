@@ -1,0 +1,11 @@
+﻿C:\Users\patrick.braga\source\repos\Hero\src\Hero.Jobs\Jobs\HeroesSyncJob.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Jobs\Program.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Jobs\SchedulerJobs.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Jobs\obj\Debug\net6.0\Jobs.GlobalUsings.g.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Jobs\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Jobs\obj\Debug\net6.0\Jobs.AssemblyInfo.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Jobs\obj\Debug\net6.0\Jobs.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Jobs\appsettings.Development.json
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Jobs\appsettings.json
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Jobs\Dockerfile
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Jobs\Properties\launchSettings.json

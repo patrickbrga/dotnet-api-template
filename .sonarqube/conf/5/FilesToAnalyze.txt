@@ -1,0 +1,10 @@
+﻿C:\Users\patrick.braga\source\repos\Hero\src\Hero.Api\Controllers\HeroController.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Api\Program.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Api\obj\Debug\net6.0\Api.GlobalUsings.g.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Api\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Api\obj\Debug\net6.0\Api.AssemblyInfo.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Api\obj\Debug\net6.0\Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Api\appsettings.Development.json
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Api\appsettings.json
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Api\Dockerfile
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Api\Properties\launchSettings.json

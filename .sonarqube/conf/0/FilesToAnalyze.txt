@@ -1,0 +1,8 @@
+﻿C:\Users\patrick.braga\source\repos\Hero\src\Hero.Shared\Api\BaseRoute.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Shared\Api\EnvironmentVariables.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Shared\Core\Entities\BaseEntity.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Shared\Core\Models\BaseRequestFilter.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Shared\Core\Models\BaseResponse.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Shared\Core\Result.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Shared\Infra\AsyncOutResult.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Shared\Infra\DataHelpers.cs

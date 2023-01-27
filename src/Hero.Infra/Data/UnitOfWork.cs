@@ -7,37 +7,24 @@ namespace Infra.Data
     {
         private readonly AppDbContext _appDbContext;
 
-        public UnitOfWork(AppDbContext appDbContext)
-        {
-            _appDbContext = appDbContext;
-        }
+        public UnitOfWork(AppDbContext appDbContext) => _appDbContext = appDbContext;
 
-        public void CreateExecutionStrategy()
-        {
-            _appDbContext.Database.CreateExecutionStrategy();
-        }
+        public void CreateExecutionStrategy() => _appDbContext.Database.CreateExecutionStrategy();
 
-        public IDbContextTransaction OpenTransaction()
-        {
-            return _appDbContext.Database.BeginTransaction();
-        }
+        public IDbContextTransaction OpenTransaction() => _appDbContext.Database.BeginTransaction();
 
-        public void RollbackTransaction()
-        {
-            _appDbContext.Database.RollbackTransaction();
-        }
+        public void RollbackTransaction() => _appDbContext.Database.RollbackTransaction();
 
-        public async Task<bool> Commit()
+        public async Task CommitTransactionAsync()
         {
-            var save = await _appDbContext.SaveChangesAsync();
-            _appDbContext.Database.CommitTransaction();
-
-            return save > 0;
+            await _appDbContext.SaveChangesAsync();
+            await _appDbContext.Database.CommitTransactionAsync();
         }
 
         public void Dispose()
         {
             _appDbContext.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }

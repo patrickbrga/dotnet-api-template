@@ -1,0 +1,3 @@
+﻿C:\Users\patrick.braga\source\repos\Hero\src\Hero.IoC\DependencyRegistration.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.IoC\Extensions\EntityConfigurationExtension.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.IoC\Extensions\MappingExtension.cs

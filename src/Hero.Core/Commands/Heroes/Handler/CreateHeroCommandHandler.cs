@@ -33,7 +33,7 @@ namespace Core.Commands.Heroes.Handler
 
                 await heroRepository.AddAsync(hero);
 
-                await unitOfWork.Commit();
+                await unitOfWork.CommitTransactionAsync();
             }
             catch (Exception ex)
             {

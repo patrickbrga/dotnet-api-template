@@ -3,9 +3,9 @@
 namespace Shared.Api
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true, Inherited = true)]
-    public class BaseRoute : RouteAttribute
+    public class BaseRouteAttribute : RouteAttribute
     {
-        public BaseRoute(string controller)
+        public BaseRouteAttribute(string controller)
            : base($"api/{controller}")
         {
         }

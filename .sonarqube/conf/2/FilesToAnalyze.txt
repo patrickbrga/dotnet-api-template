@@ -1,0 +1,8 @@
+﻿C:\Users\patrick.braga\source\repos\Hero\src\Hero.Infra\Data\AppDbContext.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Infra\Data\Configurations\Heroes\HeroModelConfiguration.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Infra\Data\Repositories\BaseRepository.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Infra\Data\Repositories\Heroes\HeroRepository.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Infra\Data\UnitOfWork.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Infra\Migrations\20230104204552_InitialCreate.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Infra\Migrations\20230104204552_InitialCreate.Designer.cs
+C:\Users\patrick.braga\source\repos\Hero\src\Hero.Infra\Migrations\AppDbContextModelSnapshot.cs

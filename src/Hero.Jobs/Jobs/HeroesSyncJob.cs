@@ -1,3 +1,4 @@
+using Core.Queries.Heroes;
 using MediatR;
 using Quartz;
 using Serilog;
@@ -6,10 +7,10 @@ namespace Jobs.Jobs
 {
     public class HeroesSyncJob : IJob
     {
-        public static JobKey JobKey = new JobKey("HeroesSyncJobKey", "Heroes");
-        public static TriggerKey TriggerKey = new TriggerKey("HeroesSyncJobTrigger", "Heroes");
+        public static readonly JobKey JobKey = new JobKey("HeroesSyncJobKey", "Heroes");
+        public static readonly TriggerKey TriggerKey = new TriggerKey("HeroesSyncJobTrigger", "Heroes");
 
-        private IMediator mediator;
+        private readonly IMediator mediator;
 
         public HeroesSyncJob(IMediator mediator)
         {
@@ -19,6 +20,7 @@ namespace Jobs.Jobs
         public async Task Execute(IJobExecutionContext context)
         {
             Log.Information("<{EventoId}> - Iniciando Execução", "HeroJob");
+            await mediator.Send(new GetHeroQuery());
         }
     }
 }

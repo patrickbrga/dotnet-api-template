@@ -10,6 +10,6 @@ namespace Core.Interfaces
 
         void RollbackTransaction();
 
-        Task<bool> Commit();
+        Task CommitTransactionAsync();
     }
 }

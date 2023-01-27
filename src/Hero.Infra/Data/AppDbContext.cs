@@ -15,10 +15,9 @@ namespace Infra.Data
 
         public virtual DbSet<Hero> Hero { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            options.EnableSensitiveDataLogging();
-            base.OnConfiguring(options);
+            base.OnConfiguring(optionsBuilder);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -40,8 +39,8 @@ namespace Infra.Data
 
         public static void InitializeDatabase(IApplicationBuilder app)
         {
-            using var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope();
-            serviceScope.ServiceProvider.GetRequiredService<AppDbContext>().Database.Migrate();
+            using var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>()?.CreateScope();
+            serviceScope?.ServiceProvider.GetRequiredService<AppDbContext>().Database.Migrate();
         }
     }
 }

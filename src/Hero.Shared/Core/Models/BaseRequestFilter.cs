@@ -8,7 +8,7 @@
         public string? SortingProp { get; set; }
         public bool? Ascending { get; set; } = true;
 
-        internal int Skip
+        public int Skip
         {
             get
             {

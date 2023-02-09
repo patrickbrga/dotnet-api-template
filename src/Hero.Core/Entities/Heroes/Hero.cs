@@ -4,6 +4,6 @@ namespace Core.Entities.Heroes
 {
     public class Hero : BaseEntity
     {
-        public string? Nome { get; set; }
+        public string? Nome { get; private set; }
     }
 }

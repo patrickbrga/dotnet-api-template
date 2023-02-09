@@ -23,9 +23,9 @@ namespace Infra.Data.Repositories.Heroes
             if (!string.IsNullOrWhiteSpace(nome))
                 query = query.Where(e => e.Nome.ToLower().StartsWith(nome.ToLower()));
 
-            if (!string.IsNullOrEmpty(sortingProp) && asc != null)
-                if (DataHelpers.CheckExistingProperty<Hero>(sortingProp))
-                    query = query.OrderByDynamic(sortingProp, (bool)asc);
+            if (!string.IsNullOrEmpty(sortingProp) && asc != null
+                && DataHelpers.CheckExistingProperty<Hero>(sortingProp))
+                query = query.OrderByDynamic(sortingProp, (bool)asc);
 
             if (take != null && offSet != null)
                 return new AsyncOutResult<IEnumerable<Hero>, int>(await query.Skip((int)offSet).Take((int)take).ToListAsync(), await query.CountAsync());

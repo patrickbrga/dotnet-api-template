@@ -4,6 +4,7 @@ using Core.Interfaces;
 using Core.Interfaces.Repositories.Heroes;
 using Core.Models.Responses;
 using MediatR;
+using Serilog;
 using Shared.Core;
 
 namespace Core.Commands.Heroes.Handler
@@ -37,6 +38,7 @@ namespace Core.Commands.Heroes.Handler
             }
             catch (Exception ex)
             {
+                Log.Warning(ex, "<{EventoId}> - Falha ao cadastrar heroi", "ErroCadastrarHeroi");
                 unitOfWork.RollbackTransaction();
             }
 

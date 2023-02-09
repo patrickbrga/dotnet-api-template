@@ -21,7 +21,7 @@ namespace Core.Queries.Heroes.Handler
         {
             var result = new Result<IEnumerable<HeroResponse>>();
 
-            var heroes = await heroRepository.Get(query.Nome, null, null, "Nome", null);
+            var heroes = await heroRepository.Get(query.Nome, query.Take, query.Skip, query.SortingProp, query.Ascending);
 
             result.Value = mapper.Map<IEnumerable<HeroResponse>>(heroes.Result(out var count));
             result.Count = count;

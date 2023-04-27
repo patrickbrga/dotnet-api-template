@@ -1,4 +1,4 @@
-# api-template-net-6
+# dotnet-api-template
 
 # **Hero API**
 
